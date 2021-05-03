@@ -1,7 +1,299 @@
-@media only screen and (max-width: 375px) {
-    
+body {
+    margin: 0;
+    font-family: Josefin Sans;
+    min-height: 100vh;
 }
 
-@media only screen and (max-width: 1400px) {
-    
+
+/* X-Small devices (mobile phone from 0px to 576px) */
+@media (min-width: 0px) and (max-width: 375px) {
+    body {
+        background: linear-gradient(135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%));
+        width: 375px;
+    }
+
+    /* Container */
+
+    /* Header */
+
+    .header {
+        padding: 20px 25px;
+        width: 100%;
+
+    }
+
+    /* Content */
+
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content-img{
+        width: 425px;
+    }
+
+    #hero-mobile{
+width: 100%;
+    }
+
+    #hero-desktop {
+        display: none;
+    }
+
+    .content-text {
+        text-align: center;
+        width: 425px;
+    }
+
+    .text-header {
+        padding-top: 20px;
+    }
+
+    h1 {
+        text-transform: uppercase;
+        font-weight: 300;
+        line-height: 42px;
+        color: #CE9898;
+        letter-spacing: 0.4rem;
+    }
+
+    h1 span {
+        display: block;
+        font-weight: 600;
+        line-height: 42px;
+        color: black;
+        letter-spacing: 0.4rem;
+    }
+
+    .text {
+        padding: 0 20px;
+
+    }
+
+    p {
+        line-height: 22px;
+        color: #CE9898;
+        font-weight: 400;
+        size: 14px;
+    }
+
+    /* Input Style */
+
+    button {
+        box-shadow: 0px 15px 20px rgba(198, 110, 110, 0.247569);
+    }
+
+    #icon-arrow {
+        background-color: #EE8B8B;
+        border-radius: 28px;
+        background-image: url(images/icon-arrow.svg);
+        background-repeat: no-repeat;
+        border: none;
+        width: 70px;
+        background-position: center;
+    }
+
+    /* Form CSS */
+
+    form{
+        width: 425px;
+    }
+
+    form::after {
+        content: '';
+        position: absolute;
+        top: 29%;
+        right: 23%;
+        width: 24px;
+        height: 16px;
+        background-image: url("../images/icon-error.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        -webkit-transition: all ease-in-out .2s;
+        transition: all ease-in-out .2s;
+        z-index: 3;
+        opacity: 0;
+    }
+
+    form p {
+        opacity: 0;
+        -webkit-transition: all ease-in-out .2s;
+        transition: all ease-in-out .2s;
+    }
+
+    form input {
+        background: none;
+        padding: 1rem 1rem;
+        opacity: 0.5;
+        height: 20px;
+        width: 70%;
+        border-radius: 30px;
+        border: solid 2px #ce9797;;
+        margin: 1rem 1.8rem;
+        color: #413a3a;
+        font-family: 'Josefin Sans', sans-serif;
+        position: relative;
+        -webkit-transition: all ease-in-out .2s;
+        transition: all ease-in-out .2s;
+    }
+
+    form input::-webkit-input-placeholder {
+        color: #ce9797;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    form input:-ms-input-placeholder {
+        color: #ce9797;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    form input::-ms-input-placeholder {
+        color: #ce9797;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    form input::placeholder {
+        color: #ce9797;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    form button {
+        background: Linear-gradient(135deg, #f8bfbf, #ee8c8c);
+        position: absolute;
+        height: 55px;
+        width: 20%;
+        right: -3%;
+        top: 93%;
+        border-radius: 30px;
+        border: none;
+        -webkit-box-shadow: 2px 9px 16px #8282825b;
+        box-shadow: 2px 9px 16px #8282825b;
+        cursor: pointer;
+        -webkit-transition: all ease-in-out .2s;
+        transition: all ease-in-out .2s;
+    }
+
+    form button:hover {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+
+    form button:active {
+        -webkit-transform: scale(0.95);
+        transform: scale(0.95);
+    }
+
+
+
+
+    form.wrong input {
+        border-color: #f96262;
+    }
+
+    form.wrong::after {
+        opacity: 1;
+    }
+
+    form.wrong p {
+        padding-left: 1.5rem;
+        font-size: 12px;
+        color: #f96262;
+        text-align: left;
+        opacity: 1;
+    }
+
+    form.wrong button {
+        -webkit-filter: brightness(130%);
+        filter: brightness(130%);
+        cursor: unset;
+    }
+
+    form.wrong button:active,
+    form.wrong button:hover {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+}
+
+/* Small devices (landscape phones, from 576px to 768px) */
+@media (min-width: 376px) and (max-width: 767.98px) {
+    #hero-desktop {
+        display: none;
+    }
+}
+
+/* Medium devices (tablets, from 768px to 992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #hero-desktop {
+        display: none;
+    }
+}
+
+/* Large devices (desktops, from 992px to 1200px) */
+@media (min-width: 992px) and (max-width: 1198.98px) {
+    #hero-mobile {
+        display: none;
+    }
+}
+
+/* X-Large devices (large desktops, from 1200px to 1400px) */
+@media (min-width: 1200px) and (max-width: 1398.98px) {
+    #hero-mobile {
+        display: none;
+    }
+
+    /* Input Style */
+
+    input {
+        padding-left: 15px;
+    }
+
+    .input-reg {
+        margin: 20px 40px;
+        display: flex;
+        border: 1px solid #CE9898;
+
+        border-radius: 28px;
+
+
+    }
+
+    #email {
+        border: none;
+
+        opacity: 0.5;
+
+        width: 100%;
+        line-height: 35px;
+        flex-grow: 2;
+    }
+
+    button {}
+
+    #icon-arrow {
+        box-shadow: 0px 15px 20px rgba(198, 110, 110, 0.247569);
+        background-color: #EE8B8B;
+        border-radius: 28px;
+        background-image: url(images/icon-arrow.svg);
+        background-repeat: no-repeat;
+        border: none;
+        width: 70px;
+        background-position: center;
+    }
+
+    .img-error {
+        display: none;
+    }
+
+    #message-error {}
+
+}
+
+/* XX-Large devices (large desktops, less than 1400px) */
+@media (min-width: 1400px) {
+    #hero-mobile {
+        display: none;
+    }
 }
